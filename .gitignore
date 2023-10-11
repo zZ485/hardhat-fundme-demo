@@ -1,6 +1,7 @@
 .encryptedKey.json
 node_modules
 .env.example
+.env
 coverage
 coverage.json
 typechain
