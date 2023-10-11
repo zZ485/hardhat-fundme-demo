@@ -36,6 +36,11 @@ const { developmentChains } = require("../../helper-hardhat-config")
                       "You need to spend more ETH!"
                   )
               })
+              //to get wether the owner is the correct owner
+              it("To get the owner of the contrasts", async () => {
+                const owner = await fundMe.getOwner()
+                assert.equal(owner, deployer)
+              })
               // we could be even more precise here by making sure exactly $50 works
               // but this is good enough for now
               it("Updates the amount funded data structure", async () => {
